@@ -23,9 +23,9 @@
         </encoder>
     </appender>
 
-    <logger name="reactor.netty.http.server.AccessLog" level="INFO" additivity="true">
-        <appender-ref ref="STDOUT"/>
-    </logger>
+<!--    <logger name="reactor.netty.http.server.AccessLog" level="ERROR" additivity="true">-->
+<!--        <appender-ref ref="STDOUT"/>-->
+<!--    </logger>-->
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>

@@ -9,5 +9,5 @@ spring:
           uri: https://www.google.com
           predicates:
             - Path=/v1/**
-          filter:
-            - StripPrefix=1
+          filters:
+            - RewritePath=/v1/(?<segment>.*),/
