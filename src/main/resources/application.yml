@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
+      routes:
+        - id: USER-SERVICE
+          uri: https://www.google.com
+          predicates:
+            - Path=/v1/**
+          filter:
+            - StripPrefix=1

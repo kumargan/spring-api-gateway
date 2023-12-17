@@ -54,7 +54,7 @@ if [ $? -eq 0 ]; then
     else
         stop_old_server
         echo "starting server "
-        java -Xmx1024M -Xms1024M -jar target/gateway-1.0.jar --server.port=8085 1>>build.logs 2>>build.logs &
+        java -Dreactor.netty.http.server.accessLogEnabled=true -Xmx1024M -Xms1024M -jar target/gateway-1.0.jar --server.port=8085 1>>build.logs 2>>build.logs &
     fi
     echo $! >> process.pid
 else
