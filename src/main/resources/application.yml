@@ -11,6 +11,9 @@ spring:
           uri: https://www.google.com
           predicates:
             - Path=/v1/**
+          metadata:
+            - connect-timeout: 500
+            - response-timeout: 2s
           filters:
             - RewritePath=/v1/(?<segment>.*),/
             - AuthPreFilter
